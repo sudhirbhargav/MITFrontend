@@ -22,8 +22,9 @@ function Navbar() {
           {/* Logo and Primary Nav */}
           <div className="flex">
             <Link to="/" className="flex items-center">
-              <Store className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">MIT Marketplace</span>
+            <img src="../images/MIT_Logo.png" alt="logo" className="h-20 w-15 items-start	" />
+              {/* <Store className="h-8 w-8 text-indigo-600" /> */}
+              {/* <span className="ml-2 text-xl font-bold text-gray-900">MIT Marketplace</span> */}
             </Link>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
