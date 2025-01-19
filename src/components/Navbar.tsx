@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { ShoppingCart, Menu, X, LogOut, Store, Package, Home } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import {
+  ShoppingCart,
+  Menu,
+  X,
+  LogOut,
+  Store,
+  Package,
+  Home,
+} from "lucide-react";
+import img from "../../images/MIT_Logo.svg";
 
 function Navbar() {
   const { logout } = useAuth();
@@ -10,10 +19,10 @@ function Navbar() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate("/login");
   };
-  const user=localStorage.getItem("UserName")
-  console.log(user)
+  const user = localStorage.getItem("UserName");
+  console.log(user);
 
   return (
     <nav className="bg-white shadow-sm">
@@ -22,7 +31,7 @@ function Navbar() {
           {/* Logo and Primary Nav */}
           <div className="flex">
             <Link to="/" className="flex items-center">
-            <img src="../images/MIT_Logo.png" alt="logo" className="h-20 w-15 items-start	" />
+              <img src={img} alt="logo" className="h-20 w-15 items-start	" />
               {/* <Store className="h-8 w-8 text-indigo-600" /> */}
               {/* <span className="ml-2 text-xl font-bold text-gray-900">MIT Marketplace</span> */}
             </Link>
@@ -100,7 +109,7 @@ function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}>
         <div className="pt-2 pb-3 space-y-1">
           <Link
             to="/"
